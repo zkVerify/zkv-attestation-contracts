@@ -41,14 +41,14 @@ contract ZkVerifyAggregationGlobal is Initializable, AccessControlUpgradeable, U
      * @param _operator Operator for the contract
      * @param _ismpHost Ismp host contract address
      */
-    function initialize(address _operator, address _ismpHost) public initializer {
+    function initialize(address _operator, address _ismpHost, address _upgrader) public initializer {
         __AccessControl_init();
         __UUPSUpgradeable_init();
         __IsmpGuest_init(_ismpHost);
 
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(OPERATOR, _operator);
-        _grantRole(UPGRADER_ROLE, msg.sender);
+        _grantRole(UPGRADER_ROLE, _upgrader);
     }
 
 
