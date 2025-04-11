@@ -7,6 +7,7 @@ contract ZkVerifyUltraplonk {
     IVerifyProofAggregation immutable zkVerifyAggregation;
 
     bytes32 constant PROVING_SYSTEM_ID = keccak256(abi.encodePacked("ultraplonk"));
+    bytes32 constant NO_VERSION_HASH = sha256(abi.encodePacked(""));
 
     /**
      * @notice Construct a ZkVerifyUltraplonk contract
@@ -48,7 +49,9 @@ contract ZkVerifyUltraplonk {
      * @return bytes32 the statement hash
      */
     function statementHash(bytes32 vkHash, uint256[] memory inputs) public pure returns (bytes32) {
-        return keccak256(abi.encodePacked(PROVING_SYSTEM_ID, vkHash, keccak256(encodePublicInputs(inputs))));
+        return keccak256(
+            abi.encodePacked(PROVING_SYSTEM_ID, vkHash, NO_VERSION_HASH, keccak256(encodePublicInputs(inputs)))
+        );
     }
 
     /**

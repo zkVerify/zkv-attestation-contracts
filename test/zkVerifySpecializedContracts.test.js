@@ -69,13 +69,13 @@ describe("Verifier-specific contracts", function () {
                 verifier: "ZkVerifyGroth16",
                 vkHash: "0x03cd0bc2734df75ba69a2328fa4bac1bc4981c6942a421826d36e6cb00318df7",
                 input: ["42", "24"],
-                leaf: "0xabb62e0715075b88517eaae0aee8671d38804ba75d1c133feec6836c443ab3a4"
+                leaf: "0x241367b89d78d1f33d40b4704a186826fe863ad6abaa7a4596ba964c442487c4"
             },
             {
                 verifier: "ZkVerifyUltraplonk",
-                vkHash: "0x7488c9f50af6d975b9707036995772e1f8d0b68dcd46174413321e674bdf331f",
+                vkHash: "0x1b8d5bf3f17971c1ba4271feef9607d829dc85186873b0f7d5c116cc63947ed0",
                 input: ["1", "2"],
-                leaf: "0x4e2b5c9cbc025e50d5f117a70d479db60d7144ef728b43f307bc3606fdcdba4d"
+                leaf: "0xcdb0575be792ede9060ff611cea6318e53c7894a4856c13f4d42a592e7174665"
             },
             {
                 verifier: "ZkVerifyRisc0",
