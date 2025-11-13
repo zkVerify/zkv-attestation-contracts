@@ -10,12 +10,14 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/hardhat-upgrades": "^3.9.1",
     "hardhat": "^2.22.15"
   },
   "dependencies": {
-    "@openzeppelin/contracts-upgradeable": "4.8.2",
     "@openzeppelin/contracts": "4.8.2",
+    "@openzeppelin/contracts-upgradeable": "4.8.2",
     "@polytope-labs/ismp-solidity": "1.0.0",
-    "@polytope-labs/solidity-merkle-trees": "0.3.4"
+    "@polytope-labs/solidity-merkle-trees": "0.3.4",
+    "dotenv": "^17.2.3"
   }
 }
